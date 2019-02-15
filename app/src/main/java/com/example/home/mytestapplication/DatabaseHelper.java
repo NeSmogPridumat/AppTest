@@ -6,8 +6,8 @@ import android.database.sqlite.SQLiteOpenHelper;
 
 public class DatabaseHelper extends SQLiteOpenHelper {//создание помощника SQLite
 
-    private static final String DB_NAME = "Data";// название базы данных
-    private static final int DB_VERSION = 1;// версия базы данных
+    public static final String DB_NAME = "Data";// название базы данных
+    public static final int DB_VERSION = 1;// версия базы данных
 
     DatabaseHelper (Context context){
         super(context, DB_NAME, null, DB_VERSION); // конструктор SQLite, передаём имя и версию базы данных. null - параметр для использования курсора

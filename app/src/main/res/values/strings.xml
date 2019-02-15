@@ -4,4 +4,16 @@
     <string name="list">List</string>
     <string name="edit">Edit</string>
     <string name="croup">Croup</string>
+    <string name="name">Name:</string>
+    <string name="enter_name">Enter name</string>
+    <string name="description">Description</string>
+    <string name="enter_description">Enter description</string>
+    <string name="url_image">URL image</string>
+    <string name="enter_url_image">Enter URL image</string>
+    <string name="select_color">Select color</string>
+    <string name="blue">Blue</string>
+    <string name="green">Green</string>
+    <string name="yellow">Yellow</string>
+    <string name="red">Red</string>
+    <string name="add_in_db">Add in DB</string>
 </resources>
