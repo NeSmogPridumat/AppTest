@@ -92,10 +92,10 @@
                 android:layout_weight="1"
                 app:buttonTint="@android:color/holo_blue_dark"
                 android:text="@string/blue"
-                />
+                android:checked="true"/>
 
             <android.support.v7.widget.AppCompatRadioButton
-                android:id="@+id/radioButton2"
+                android:id="@+id/radioGreen"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
@@ -103,7 +103,7 @@
                 app:buttonTint="@android:color/holo_green_dark"/>
 
             <android.support.v7.widget.AppCompatRadioButton
-                android:id="@+id/radioButton"
+                android:id="@+id/radioYellow"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
@@ -111,7 +111,7 @@
                 app:buttonTint="@android:color/holo_orange_light"/>
 
             <android.support.v7.widget.AppCompatRadioButton
-                android:id="@+id/radioButton3"
+                android:id="@+id/radioRed"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
