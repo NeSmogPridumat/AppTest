@@ -23,6 +23,7 @@
             android:id="@+id/text_name_object"
             android:text="@string/name"
             android:textSize="18dp"
+            android:focusableInTouchMode="true"
             android:textColor="@android:color/black"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"/>
@@ -85,7 +86,7 @@
             android:layout_height="wrap_content"
             android:orientation="horizontal">
 
-            <android.support.v7.widget.AppCompatRadioButton
+            <RadioButton
                 android:id="@+id/radioBlue"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
@@ -94,7 +95,7 @@
                 android:text="@string/blue"
                 android:checked="true"/>
 
-            <android.support.v7.widget.AppCompatRadioButton
+            <RadioButton
                 android:id="@+id/radioGreen"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
@@ -102,7 +103,7 @@
                 android:text="@string/green"
                 app:buttonTint="@android:color/holo_green_dark"/>
 
-            <android.support.v7.widget.AppCompatRadioButton
+            <RadioButton
                 android:id="@+id/radioYellow"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
@@ -110,7 +111,7 @@
                 android:text="@string/yellow"
                 app:buttonTint="@android:color/holo_orange_light"/>
 
-            <android.support.v7.widget.AppCompatRadioButton
+            <RadioButton
                 android:id="@+id/radioRed"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
@@ -127,7 +128,8 @@
             android:layout_marginTop="12dp"
             android:text="@string/add_in_db"
             android:layout_gravity="center_horizontal"
-            android:onClick="onClickAddDB"/>
+            android:onClick="onClickAdd"/>
+
 
         </LinearLayout>
 

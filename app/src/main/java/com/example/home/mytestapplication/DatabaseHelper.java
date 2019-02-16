@@ -16,6 +16,7 @@ public class DatabaseHelper extends SQLiteOpenHelper {//создание пом�
 
     @Override
     public void onCreate(SQLiteDatabase sqLiteDatabase) {
+
        sqLiteDatabase.execSQL("CREATE TABLE DATA(_id INTEGER PRIMARY KEY AUTOINCREMENT, " //создал таблицу Data с первичным ключом, именем, описанием, id цвета и id картинки
        + "NAME TEXT, "
        + "DESCRIPTION TEXT, "

@@ -19,6 +19,11 @@ public class MainActivity extends AppCompatActivity {
 
     }
 
+    public void onClickList (View view){
+        Intent intent = new Intent(this, ListActivity.class);
+        startActivity(intent);
+    }
+
     public void onClickAdd(View view){
         Intent intent = new Intent(this, AddActivity.class);
         startActivity(intent);
