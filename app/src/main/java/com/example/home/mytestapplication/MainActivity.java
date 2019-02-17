@@ -10,17 +10,12 @@ import android.widget.Toast;
 
 public class MainActivity extends AppCompatActivity {
 
-    Button btnList, btnAdd, btnEdit, btnGroup;
-
     private Boolean exit = false;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-
-        btnList = findViewById(R.id.list);
-
     }
 
     public void onClickList (View view){

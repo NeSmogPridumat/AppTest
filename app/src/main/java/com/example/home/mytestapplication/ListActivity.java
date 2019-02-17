@@ -55,6 +55,4 @@ public class ListActivity extends AppCompatActivity {
         cursor.close();
         db.close();
     }
-
-
 }

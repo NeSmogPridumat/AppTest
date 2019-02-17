@@ -22,8 +22,6 @@ public class AddActivity extends AppCompatActivity {
     RadioButton colorBlue, colorGreen, colorYellow, colorRed;
     int radioButtonId = 0;
 
-
-
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);

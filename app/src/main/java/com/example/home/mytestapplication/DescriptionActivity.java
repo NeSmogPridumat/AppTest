@@ -54,16 +54,6 @@ public class DescriptionActivity extends AppCompatActivity {
             RadioButton radioButtonYellow = findViewById(R.id.radioDescriptionYellow);
             RadioButton radioButtonRed = findViewById(R.id.radioDescriptionRed);
 
-        //    switch (radioId){
-        //        case 0:
-        //           radioButtonBlue.setVisibility(View.VISIBLE);
-        //        case 1:
-        //            radioButtonGreen.setVisibility(View.VISIBLE);
-        //        case 2:
-        //            radioButtonYellow.setVisibility(View.VISIBLE);
-        //        case 3:
-        //            radioButtonRed.setVisibility(View.VISIBLE);
-        //    }
             if (radioId == 0){
                 radioButtonBlue.setVisibility(View.VISIBLE);
             } else if (radioId == 1){

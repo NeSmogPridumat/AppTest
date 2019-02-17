@@ -103,6 +103,15 @@ public class EditActivity extends AppCompatActivity {
             colorYellow = findViewById(R.id.editRadioYellow);
             colorRed = findViewById(R.id.editRadioRed);
 
+            if (colorBlue.isChecked()) {// определил цвет RadioButton
+                radioButtonId = 0;
+            } else if (colorGreen.isChecked()) {
+                radioButtonId = 1;
+            } else if (colorYellow.isChecked()) {
+                radioButtonId = 2;
+            } else if (colorRed.isChecked()) {
+                radioButtonId = 3;
+            }
         }
 
         @Override
