@@ -1,11 +1,13 @@
 package com.example.home.mytestapplication;
 
+import android.content.Context;
 import android.content.Intent;
 import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
 import android.database.sqlite.SQLiteOpenHelper;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.view.LayoutInflater;
 import android.view.View;
 import android.widget.AdapterView;
 import android.widget.ListView;
@@ -53,4 +55,6 @@ public class ListActivity extends AppCompatActivity {
         cursor.close();
         db.close();
     }
+
+
 }

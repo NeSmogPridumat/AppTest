@@ -18,4 +18,6 @@
     <string name="add_in_db">Add in DB</string>
     <string name="data_added">Data added</string>
     <string name="cannot_be_empty">Cannot be empty</string>
+    <string name="edit_db">Edit db</string>
+    <string name="remove">remove</string>
 </resources>

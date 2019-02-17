@@ -1,17 +1,19 @@
 package com.example.home.mytestapplication;
 
-import android.content.ContentValues;
+
 import android.database.sqlite.SQLiteDatabase;
+import android.database.sqlite.SQLiteException;
 import android.database.sqlite.SQLiteOpenHelper;
+import android.os.AsyncTask;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
-import android.text.Editable;
-import android.text.TextWatcher;
 import android.view.View;
 import android.widget.EditText;
 import android.widget.RadioButton;
 import android.widget.RadioGroup;
 import android.widget.Toast;
+
+
 
 public class AddActivity extends AppCompatActivity {
 
@@ -47,13 +49,26 @@ public class AddActivity extends AppCompatActivity {
             nameObject.requestFocus();
             nameObject.setText("");
         } else {
-            String name = nameObject.getText().toString();// переобразовал EditText в String
-            String description = descriptionObject.getText().toString();
-            String url = urlImage.getText().toString();
+            new AddTask().execute();//добавление объекта в фоновом потоке
+        }
+    }
 
-            SQLiteOpenHelper databaseHelper = new DatabaseHelper(this);
-            SQLiteDatabase database = databaseHelper.getWritableDatabase();
+    private class AddTask extends AsyncTask <Integer, Void, Boolean>{
 
+        @Override
+        protected void onPreExecute() {
+            nameObject = findViewById(R.id.name_object);
+
+            descriptionObject = findViewById(R.id.description_object);
+
+            urlImage = findViewById(R.id.url_image);
+
+            selectColor = findViewById(R.id.radio_group);
+
+            colorBlue = findViewById(R.id.radioBlue);
+            colorGreen = findViewById(R.id.radioGreen);
+            colorYellow = findViewById(R.id.radioYellow);
+            colorRed = findViewById(R.id.radioRed);
 
             if (colorBlue.isChecked()) {// определил цвет RadioButton
                 radioButtonId = 0;
@@ -64,11 +79,29 @@ public class AddActivity extends AppCompatActivity {
             } else if (colorRed.isChecked()) {
                 radioButtonId = 3;
             }
+        }
 
-            DatabaseHelper.insertObject(database, name, description, url, radioButtonId); //внес данные в таблицу (???)
+        @Override
+        protected Boolean doInBackground(Integer... objects) {
+            SQLiteOpenHelper databaseHelper = new DatabaseHelper(AddActivity.this);
+            try {
+                SQLiteDatabase database = databaseHelper.getWritableDatabase();
+                DatabaseHelper.insertObject(database, nameObject.getText().toString(),
+                        descriptionObject.getText().toString(),
+                        urlImage.getText().toString(), radioButtonId);
+                database.close();
+                return true;
+            }catch (SQLiteException e) {
+                return false;
+            }
+        }
 
-            Toast toast = Toast.makeText(this, "Данные добавлены", Toast.LENGTH_LONG);
-            toast.show();
+        @Override
+        protected void onPostExecute(Boolean success) {
+            if(success){
+                Toast toast = Toast.makeText(AddActivity.this, "Данные добавлены", Toast.LENGTH_LONG);
+                toast.show();
+            }
         }
     }
 }

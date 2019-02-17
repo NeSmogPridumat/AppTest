@@ -22,7 +22,11 @@
             android:name=".AddActivity"
             android:screenOrientation="portrait" />
         <activity android:name=".ListActivity" />
-        <activity android:name=".DescriptionActivity"></activity>
+        <activity android:name=".DescriptionActivity" />
+        <activity android:name=".ListEditActivity" />
+        <activity android:name=".EditActivity"></activity>
     </application>
+
+    <uses-permission android:name="android.permission.INTERNET"></uses-permission>
 
 </manifest>

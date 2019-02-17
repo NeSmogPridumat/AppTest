@@ -7,63 +7,63 @@
     android:orientation="vertical"
     tools:context=".DescriptionActivity">
 
-        <LinearLayout
-            android:orientation="horizontal"
+
+
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <TextView
+            android:id="@+id/textName"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content">
+            android:layout_height="wrap_content"
+            android:textColor="@android:color/black"
+            android:textSize="24dp"
+            android:layout_weight="1"
+            android:textStyle="normal"/>
 
-            <TextView
-                android:id="@+id/textName"
-                android:layout_width="match_parent"
+        <FrameLayout
+            android:id="@+id/frame_layout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="4">
+
+            <RadioButton
+                android:id="@+id/radioDescriptionBlue"
+                android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:textColor="@android:color/black"
-                android:textSize="24dp"
-                android:layout_weight="1"
-                android:textStyle="normal"/>
+                android:checked="true"
+                android:visibility="invisible"
+                app:buttonTint="@android:color/holo_blue_dark" />
 
-            <FrameLayout
-                android:layout_width="match_parent"
+            <RadioButton
+                android:id="@+id/radioDescriptionGreen"
+                android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_weight="7">
+                app:buttonTint="@android:color/holo_green_dark"
+                android:visibility="invisible"
+                android:checked="true"/>
 
-                <RadioButton
-                    android:id="@+id/radioDescriptionBlue"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    app:buttonTint="@android:color/holo_blue_dark"
-                    android:visibility="invisible"
-                    android:checked="true"/>
+            <RadioButton
+                android:id="@+id/radioDescriptionYellow"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:buttonTint="@android:color/holo_orange_light"
+                android:visibility="invisible"
+                android:checked="true"/>
 
-                <RadioButton
-                    android:id="@+id/radioDescriptionGreen"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    app:buttonTint="@android:color/holo_green_dark"
-                    android:visibility="invisible"
-                    android:checked="true"/>
+            <RadioButton
+                android:id="@+id/radioDescriptionRed"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:buttonTint="@android:color/holo_red_dark"
+                android:visibility="invisible"
+                android:checked="true"/>
 
-                <RadioButton
-                    android:id="@+id/radioDescriptionYellow"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    app:buttonTint="@android:color/holo_orange_light"
-                    android:visibility="invisible"
-                    android:checked="true"/>
+        </FrameLayout>
 
-                <RadioButton
-                    android:id="@+id/radioDescriptionRed"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    app:buttonTint="@android:color/holo_red_dark"
-                    android:visibility="invisible"
-                    android:checked="true"/>
-
-            </FrameLayout>
-
-
-        </LinearLayout>
-
-
+    </LinearLayout>
 
     <TextView
         android:id="@+id/textDescription"
@@ -72,8 +72,12 @@
         android:textSize="24dp"
         android:textColor="@android:color/black"
         android:layout_marginTop="12dp"
-        android:textStyle="italic"/>
+        android:textStyle="normal"/>
 
-
+    <ImageView
+        android:id="@+id/image_view"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_margin="8dp"/>
 
 </LinearLayout>

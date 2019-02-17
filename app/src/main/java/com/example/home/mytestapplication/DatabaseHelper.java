@@ -39,4 +39,20 @@ public class DatabaseHelper extends SQLiteOpenHelper {//создание пом�
         objectValues.put("ID_COLOR", colorId);
         sqLiteDatabase.insert("DATA", null, objectValues);
     }
+
+    static void updateObject(SQLiteDatabase sqLiteDatabase, String name, String description, //метод для заполнения базы данных
+                             String url,
+                             int colorId, int id){
+        ContentValues objectValues = new ContentValues();
+        objectValues.put("NAME", name);
+        objectValues.put("DESCRIPTION", description);
+        objectValues.put("IMAGE_URL", url);
+        objectValues.put("ID_COLOR", colorId);
+        sqLiteDatabase.update("DATA", objectValues, "_id = ?",
+                new String[]{Integer.toString(id)});
+    }
+
+    static void deleteObject (SQLiteDatabase sqLiteDatabase, String objectId){
+        sqLiteDatabase.delete("DATA", "_id = ?", new String[]{objectId});
+    }
 }
