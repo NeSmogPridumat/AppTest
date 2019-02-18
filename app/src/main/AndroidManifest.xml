@@ -21,10 +21,14 @@
         <activity
             android:name=".AddActivity"
             android:screenOrientation="portrait" />
-        <activity android:name=".ListActivity" />
-        <activity android:name=".DescriptionActivity" />
-        <activity android:name=".ListEditActivity" />
-        <activity android:name=".EditActivity"></activity>
+        <activity android:name=".ListActivity"
+            android:screenOrientation="portrait"/>
+        <activity android:name=".DescriptionActivity"
+            android:screenOrientation="portrait"/>
+        <activity android:name=".ListEditActivity"
+            android:screenOrientation="portrait"/>
+        <activity android:name=".EditActivity"
+            android:screenOrientation="portrait"></activity>
     </application>
 
     <uses-permission android:name="android.permission.INTERNET"></uses-permission>
